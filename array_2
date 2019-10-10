@@ -1,0 +1,28 @@
+var words = ["rainbow", "heart", "purple", "friendship", "love"];
+
+var index = 0;
+
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+
+  background(0);
+
+  fill(255);
+  textSize(32);
+  text(words[index], 12, 200);
+  // above function text() is used to display text on the screen 
+  //first parameter is the word we want to print and the other two are the coordinates where we want the text
+}
+
+//the below function executes when we click on the canvas 
+// it is an inbuilt function
+function mousePressed() {
+  index = index + 1;
+
+  if (index == words.length) {
+    index = 0;
+  }
+}
